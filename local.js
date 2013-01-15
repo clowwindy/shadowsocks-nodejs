@@ -213,7 +213,7 @@
     });
   });
 
-  server.listen(PORT, function() {
+  server.listen(PORT, "::", function() {
     return util.log("server listening at port " + PORT);
   });
 

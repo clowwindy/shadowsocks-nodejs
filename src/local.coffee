@@ -193,7 +193,7 @@ server = net.createServer((connection) ->
     remote.destroy()  if remote
     connection.destroy()
 )
-server.listen PORT, ->
+server.listen PORT, "::", ->
   util.log "server listening at port " + PORT
 
 server.on "error", (e) ->
