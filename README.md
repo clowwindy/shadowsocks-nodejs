@@ -1,8 +1,11 @@
 shadowsocks-nodejs
 ===========
 
-Current version: 1.4.12
 [![Build Status](https://travis-ci.org/clowwindy/shadowsocks-nodejs.png)](https://travis-ci.org/clowwindy/shadowsocks-nodejs)
+
+[![NPM](https://nodei.co/npm/shadowsocks.png?stars&downloads)](https://nodei.co/npm/shadowsocks/)
+[![NPM](https://nodei.co/npm-dl/shadowsocks.png)](https://nodei.co/npm/shadowsocks/)
+
 
 shadowsocks-nodejs is a lightweight tunnel proxy which can help you get through
  firewalls. It is a port of [shadowsocks](https://github.com/clowwindy/shadowsocks).
