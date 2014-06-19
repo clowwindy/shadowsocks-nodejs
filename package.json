@@ -35,6 +35,6 @@
     "url": "https://github.com/clowwindy/shadowsocks-nodejs.git"
   },
   "devDependencies": {
-    "coffee-script": ">=1.6.2"
+    "win-spawn": "~2.0.0"
   }
 }
