@@ -26,6 +26,8 @@
     "ssserver": "./bin/ssserver"
   },
   "scripts": {
+    "preinstall": "npm install -g coffee-script",
+    "prepublish": "cake build",
     "test": "cake test"
   },
   "homepage": "https://github.com/clowwindy/shadowsocks-nodejs",
