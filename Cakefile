@@ -1,35 +1,22 @@
-{print} = require 'util'
-{spawn} = require 'child_process'
+spawn = require 'win-spawn'
 
-build = () ->
-  os = require 'os'
-  if os.platform() == 'win32'
-    coffeeCmd = 'coffee.cmd'
-  else
-    coffeeCmd = 'coffee'
-  coffee = spawn coffeeCmd, ['-c', '-o', 'lib/shadowsocks', 'src']
-  coffee.stderr.on 'data', (data) ->
-    process.stderr.write data.toString()
-  coffee.stdout.on 'data', (data) ->
-    print data.toString()
-  coffee.on 'exit', (code) ->
-    if code != 0
-      process.exit code
+build = ->
+  coffee = spawn(
+    'coffee'
+    ['-c', '-o', 'lib/shadowsocks', 'src']
+    { stdio: 'inherit' }
+  )
+  coffee.on 'exit', process.exit
 
-test = () ->
-  os = require 'os'
-  coffee = spawn 'node', ['lib/shadowsocks/test.js']
-  coffee.stderr.on 'data', (data) ->
-    process.stderr.write data.toString()
-  coffee.stdout.on 'data', (data) ->
-    print data.toString()
-  coffee.on 'exit', (code) ->
-    if code != 0
-      process.exit code
+test = ->
+  coffee = spawn(
+    'node'
+    ['lib/shadowsocks/test.js']
+    { stdio: 'inherit' }
+  )
+  coffee.on 'exit', process.exit
 
-task 'build', 'Build ./ from src/', ->
-  build()
+task 'build', 'Build ./ from src/', build
 
-task 'test', 'Run unit test', ->
-  test()
+task 'test', 'Run unit test', test
 

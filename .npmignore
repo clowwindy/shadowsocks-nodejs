@@ -1,0 +1,6 @@
+src
+test
+Cakefile
+CONTRIBUTING.md
+appveyor.yml
+.*
