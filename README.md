@@ -22,6 +22,6 @@ node.js?
 [Build Status]:    https://img.shields.io/travis/clowwindy/shadowsocks-nodejs/master.svg?style=flat
 [NPM]:             https://www.npmjs.org/package/shadowsocks
 [NPM version]:     https://img.shields.io/npm/v/shadowsocks.svg?style=flatp
-[Travis CI]:       https://travis-ci.org/clowwindy/shadowsocks-nodejs
+[Travis CI]:       https://travis-ci.org/shadowsocks/shadowsocks-nodejs
 [shadowsocks]:     https://github.com/clowwindy/shadowsocks
 [Other versions]:  https://github.com/clowwindy/shadowsocks/wiki/Ports-and-Clients
